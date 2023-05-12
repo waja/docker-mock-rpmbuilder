@@ -82,7 +82,7 @@ docker run --rm --privileged=true \
 
 The below line gives an example of defines configurations. If you have your spec
 file which takes defines you can configure them in the environment variable as
-below. The sytax is DEFINE=VALUE it will then be converted to --define
+below. The syntax is DEFINE=VALUE it will then be converted to --define
 'DEFINE VALUE' instead. You can provide multiple defines by separating them by
 spaces.
 
@@ -100,18 +100,18 @@ It is important to know:
 invoked twice: the first to build SRPM the second to build all other RPMS
 * The folders specified for SPEC_FILE, SOURCES and SOURCE_RPM env variables are
 relative to your mount point. This means if files are at the root of mount point
-you need to specify only the file name, otherwise the subfolder should be added
+you need to specify only the filename, otherwise the subfolder should be added
 too (See SOURCES in my example)
 
 > NB: It's important to run the container with privileged rights because mock
 > needs the "unshare" system call to create a
 > new mountpoint inside the process.
-> Withour this you will get this error:
+> Without this you will get this error:
 >
 > ERROR: Namespace unshare failed.
 >
 > If the '--cap-add=SYS_ADMIN' is not working for you, you can run the container
-> with the privilaged parameter. Replace '--cap-add=SYS_ADMIN' with
+> with the privileged parameter. Replace '--cap-add=SYS_ADMIN' with
 > '--privileged=true'.
 
 ## Execute without cleanup of Mock CHROOT folder
@@ -131,7 +131,7 @@ mmornati/mock-rpmbuilder
 
 ## Allowed configurations
 
-See at [mock repo](https://github.com/rpm-software-management/mock/tree/main/mock-core-configs/etc/mock)
+See at [mock repository](https://github.com/rpm-software-management/mock/tree/main/mock-core-configs/etc/mock)
 
 
 ## Signing your RPMs with GPG Key
