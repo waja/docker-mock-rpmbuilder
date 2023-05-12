@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM fedora:rawhide
 LABEL "maintainer"="Marco Mornati <marco@mornati.net>"
 LABEL "com.github.actions.name"="RPM Builder"
 LABEL "com.github.actions.description"="Build RPM using RedHat Mock"
