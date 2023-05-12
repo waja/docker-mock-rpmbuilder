@@ -17,7 +17,7 @@ env:
   IMAGE_NAME: mock-rpmbuilder
 
 jobs:
- codespell:
+  codespell:
     name: codespell
     strategy:
       fail-fast: false
@@ -67,7 +67,7 @@ jobs:
         with:
           sarif_file: reports
   test-build:
-     needs:
+    needs:
       - codespell
 #      - super-linter
       - shiftleft
